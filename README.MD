@@ -45,8 +45,8 @@ git tag -s v1.1.6 -m "Release v1.1.6"
 git push origin v1.1.6
 
 # Update floating tags to point to this version
-git tag -fa v1 -m "v1 -> v1.1.6" v1.1.6
-git tag -fa v1.1 -m "v1.1 -> v1.1.6" v1.1.6
+git tag -fa v1 v1.1.6^{}
+git tag -fa v1.1 v1.1.6^{}
 
 # Push the updated floating tags (force is needed because they move)
 git push origin v1 v1.1 --force
